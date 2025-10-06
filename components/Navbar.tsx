@@ -1,5 +1,6 @@
 import React from 'react';
 import type { Page } from '../App';
+import Logo from './Logo';
 
 interface NavbarProps {
   currentPage: Page;
@@ -33,7 +34,14 @@ const Navbar: React.FC<NavbarProps> = ({ currentPage, setCurrentPage }) => {
       <nav className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
-            <button onClick={() => setCurrentPage('home')} className="font-bold text-xl text-white">Academia Antonio</button>
+            <button 
+              onClick={() => setCurrentPage('home')} 
+              className="flex items-center gap-2 text-white transition-opacity hover:opacity-80"
+              aria-label="Ir a la página de inicio de Academia Antonio"
+            >
+              <Logo className="h-7 w-auto" />
+              <span className="font-bold text-xl">Academia Antonio</span>
+            </button>
           </div>
           <div className="flex items-center space-x-1 md:space-x-4">
             <NavLink page="home" currentPage={currentPage} setCurrentPage={setCurrentPage}>

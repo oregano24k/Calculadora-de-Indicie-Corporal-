@@ -1,5 +1,5 @@
 {
-  "name": "Calculadora de Grasa Corporal",
-  "description": "Una aplicación web para calcular el porcentaje de grasa corporal utilizando el método de la Marina de los EE. UU., que considera la altura, el peso y las circunferencias del cuerpo para una estimación precisa. Proporciona resultados categorizados y visuales.",
+  "name": "Academia Antonio",
+  "description": "Una aplicación web con una calculadora de grasa corporal y otras herramientas para el fitness.",
   "requestFramePermissions": []
 }

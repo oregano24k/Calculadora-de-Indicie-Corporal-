@@ -3,6 +3,7 @@ import Navbar from './components/Navbar';
 import HomePage from './pages/HomePage';
 import CalculatorPage from './pages/CalculatorPage';
 import AboutPage from './pages/AboutPage';
+import Footer from './components/Footer';
 
 export type Page = 'home' | 'calculator' | 'about';
 
@@ -17,17 +18,18 @@ const App: React.FC = () => {
         return <AboutPage />;
       case 'home':
       default:
-        return <HomePage />;
+        return <HomePage setCurrentPage={setCurrentPage} />;
     }
   };
 
   return (
-    <>
+    <div className="flex flex-col min-h-screen">
       <Navbar currentPage={currentPage} setCurrentPage={setCurrentPage} />
-      <main>
+      <main className="flex-grow">
         {renderPage()}
       </main>
-    </>
+      <Footer />
+    </div>
   );
 };
 
